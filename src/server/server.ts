@@ -5,7 +5,7 @@ import '../config/config';
 
 const app = express();
 
-app.use(bodyParser.json())
+app.use(bodyParser.json({ limit: '50mb' }))
 
 app.post('/', (req, res) => {
   console.log(req.body);
